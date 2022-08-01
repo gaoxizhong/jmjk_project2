@@ -3,7 +3,7 @@
 
     <!-- 头部开始 -->
     <el-header>
-      <CommonHeader :id="`${id}`" :tag_pages="tag_pages" :is_search='is_search'></CommonHeader>
+      <CommonHeader></CommonHeader>
     </el-header>
     <!-- 头部结束 -->
     <!-- 主题开始 -->
@@ -134,7 +134,6 @@
         is_view: true,
         is_search:true,
         main_bg:{},
-        tag_pages:'',
         id: 0,
         search:'',
         getListInfo:[],
@@ -157,11 +156,9 @@
       let getViewportSize = this.$getViewportSize();
       this.viewWidth = getViewportSize.width;
       this.viewHeight = getViewportSize.height;
-      this.tag_pages = this.$route.query.tag_pages;
       this.tag = this.$route.query.tag;
       this.title = this.$route.query.name;
       this.main_bg = this.$root.main_bg;  // 背景图
-      this.id = Number(this.$route.query.id);
       document.title = '药物靶点-'+ this.$route.query.name;
       // 获取列表
       this.getHomeRightList();

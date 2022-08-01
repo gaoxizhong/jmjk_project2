@@ -3,7 +3,7 @@
 
     <!-- 头部开始 -->
     <el-header>
-      <CommonHeader :id="`${id}`" :tag_pages="tag_pages" :is_search='is_search'></CommonHeader>
+      <CommonHeader></CommonHeader>
     </el-header>
     <!-- 头部结束 -->
     <!-- 主题开始 -->
@@ -63,8 +63,6 @@
         is_view: true,
         is_search:true,
         main_bg:{},
-        tag_pages:'',
-        id: 0,
         type:'',
         search:'',
         getListInfo:[],
@@ -87,12 +85,10 @@
     created(){
       let getViewportSize = this.$getViewportSize();
       this.viewWidth = getViewportSize.width;
-      this.tag_pages = this.$route.query.tag_pages;
       this.tag = this.$route.query.tag;
       this.type = this.$route.query.type;
       this.title = this.$route.query.name;
       this.main_bg = this.$root.main_bg;  // 背景图
-      this.id = Number(this.$route.query.id);
       document.title = '结构化脑图-'+ this.$route.query.name;
       // 获取列表
       this.getHomeRightList();

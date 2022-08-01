@@ -193,18 +193,13 @@
       let tag = t;
       let name = n;
       let type = y;
-      let t_id = i; // 数据id
-      let tag_pages = this.tag_pages;
-      let id = this.id; // 导航id
-      console.log(tag)
+      let id = i; // 数据id
       if(tag == 'GuideMap'){  //指南结构脑图
         let newUrl = this.$router.resolve({
           path:'/brainMap',
           query:{
             name,
-            tag_pages,
             tag,
-            id,
             type
           }
         });
@@ -215,9 +210,7 @@
            path: '/structureCopy',
           query:{
             name,
-            tag_pages,
             tag,
-            id
           }
         });
         window.open(newUrl.href, "_blank");
@@ -227,9 +220,7 @@
           path: '/drugTarget',
           query:{
             name,
-            tag_pages,
             tag,
-            id
           }
         });
         window.open(newUrl.href, "_blank");
@@ -239,10 +230,8 @@
           path: '/guideDetails',
           query:{
             name,
-            tag_pages,
             tag,
             id,
-            t_id,
           }
         });
         window.open(newUrl.href, "_blank");
@@ -252,9 +241,7 @@
           path: '/NewDetails',
           query:{
             name,
-            tag_pages,
             tag,
-            id
           }
         });
         window.open(newUrl.href, "_blank");
