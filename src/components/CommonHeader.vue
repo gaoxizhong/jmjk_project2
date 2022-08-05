@@ -48,7 +48,8 @@ header{
   align-items: center;
 }
 .content-box{
-  width: 1200px;
+  width: 100%;
+  padding: 0 100px;
 }
 .content-col-box{
   display: flex;
@@ -63,7 +64,7 @@ header{
 }
 .l-content>img{
   width: auto;
-  height: 54px;
+  height: 44px;
 }
 .l-content-title{
   font-size:34px;

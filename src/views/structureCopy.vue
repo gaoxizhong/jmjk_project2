@@ -1,6 +1,6 @@
 <template>
-  <el-container>
-
+  <el-container :style="`height:${viewHeight}px;`">
+  <!-- <el-container> -->
     <!-- 头部开始 -->
     <el-header>
       <CommonHeader></CommonHeader>
@@ -99,6 +99,7 @@
     },
     created(){
       let getViewportSize = this.$getViewportSize();
+      this.viewHeight = getViewportSize.height;
       this.viewWidth = getViewportSize.width;
       this.tag = this.$route.query.tag;
       this.title = this.$route.query.name;
