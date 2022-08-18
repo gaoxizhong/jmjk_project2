@@ -4,7 +4,7 @@
       <el-row class="content-box">
         <el-col :span="24" class="content-col-box">
           <div class="l-content">
-            <img src="../assets/image/logo.png" alt="">
+            <img src="../assets/image/logo.jpg" alt="" />
           </div>
           <!-- <div class="r-content" v-if="phone">
             <span class="r-phone">{{ phone }}</span>

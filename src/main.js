@@ -86,6 +86,7 @@ new Vue({
         backgroundRepeat:'no-repeat',
         backgroundSize: '100% 100%',
       },
+      httpPages:'https://'
     }
   },
   store,
