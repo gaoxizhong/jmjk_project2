@@ -1,4 +1,4 @@
-# jmjk_project1
+# jmjk_project2--河科大
 
 ## Project setup
 ```
