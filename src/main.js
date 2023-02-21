@@ -61,9 +61,8 @@ Vue.prototype.$getViewportSize = function() {
 }
 //  ============ 发布项目清除缓存  以下  ===========================
 const VUE_APP_VERSION = require('../package.json').version
-console.log('当前版本号:' + VUE_APP_VERSION)
 const vers = window.localStorage.getItem("appVersion");
-console.log('缓存版本号:' + vers)
+// console.log('缓存版本号:' + vers)
 if(VUE_APP_VERSION != vers){
   // localStorage.clear()
   window.localStorage.setItem("appVersion", VUE_APP_VERSION);

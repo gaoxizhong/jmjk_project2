@@ -66,8 +66,6 @@ const router = new VueRouter({
   routes
 })
 
-
-console.log(process.env.BASE_URL)
 router.afterEach((to) => {
   if(to.meta.title){
     document.title = to.meta.title
