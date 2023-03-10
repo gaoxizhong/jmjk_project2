@@ -5,10 +5,10 @@ export default {
     baseURL: {
         // 开发
         // dev: 'https://jm.jiankangche.cn/jmjk/',
-        dev: httpUrl +'/',
+        dev: 'http://' + httpUrl +'/',
         
         // 生产
         // pro: 'https://jm.jiankangche.cn/jmjk/',
-        pro: httpUrl +'/',
+        pro: 'http://' + httpUrl +'/',
     }
 }
