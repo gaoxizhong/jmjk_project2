@@ -235,6 +235,16 @@
           }
         });
         window.open(newUrl.href, "_blank");
+      } if(tag == 'GjybypmlCh' || tag == 'GjybypmlEn'){ 
+        // 新页面打开
+        let newUrl = this.$router.resolve({
+          path: '/NewDetails1',
+          query:{
+            name,
+            tag,
+          }
+        });
+        window.open(newUrl.href, "_blank");
       }else{
         // 新页面打开
         let newUrl = this.$router.resolve({
