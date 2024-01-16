@@ -20,7 +20,7 @@
            </div>
            <div class="classinfo-box">
               <a href="javascript:0;" :class="cur_tab == 100 ?'cur-tab':'' " @click="clickTagname(all_options,100)">全部</a>
-              <a href="javascript:0;" :class="cur_tab == index ?'cur-tab':'' " v-for="(item,index) in options" :key="index" @click="clickTagname(item.key,index)">{{item.value}}</a>
+              <a v-for="(item,index) in options" :key="index" :href="item.key == 'lczsk'?item.url:'javascript:0;'" :target="item.key == 'lczsk'?'_blank':''" :class="cur_tab == index ?'cur-tab':'' " @click="item.key == 'lczsk'?'':clickTagname(item.key,index)">{{item.value}}</a>
            </div>
           </div>
          <!-- 搜索框模块结束 -->
@@ -130,7 +130,7 @@
       clickTagname(t,i){
         this.tag = t;
         this.cur_tab = i;
-        this.inputClick(this.input_name);
+        this.inputClick(this.input_name);   
       },
       // 获取分类浏览列表
       inputClick(n){
@@ -194,6 +194,7 @@
       let name = n;
       let type = y;
       let id = i; // 数据id
+
       if(tag == 'GuideMap'){  //指南结构脑图
         let newUrl = this.$router.resolve({
           path:'/brainMap',
@@ -235,13 +236,14 @@
           }
         });
         window.open(newUrl.href, "_blank");
-      } if(tag == 'GjybypmlCh' || tag == 'GjybypmlEn'){ 
+      }else if(tag == 'GjybypmlCh' || tag == 'GjybypmlEn'){ 
         // 新页面打开
         let newUrl = this.$router.resolve({
-          path: '/NewDetails1',
+          path: '/Details',
           query:{
             name,
             tag,
+            id
           }
         });
         window.open(newUrl.href, "_blank");

@@ -4,7 +4,7 @@ import store from '../store/index'
 
 import Login from '../views/Login.vue'
 import NewDetails from '../views/NewDetails.vue'     // 知识库疾病详情页
-import NewDetails1 from '../views/NewDetails.vue'     // 知识库疾病详情页
+import Details from '../views/Details.vue'     // 详情页
 import SearchPages from '../views/SearchPages.vue'  // 知识库疾病搜索页
 import guideDetails from '../views/guideDetails.vue'  //  诊断指南详情页面
 import structureCopy from '../views/structureCopy.vue'  //  指南脑图结构文案页面
@@ -34,9 +34,9 @@ const routes = [
     component: NewDetails,
   },
   {
-    path: '/NewDetails1',
-    name : 'NewDetails1',
-    component: NewDetails1,
+    path: '/Details',
+    name : 'Details',
+    component: Details,
   },
   {
     path: '/guideDetails',

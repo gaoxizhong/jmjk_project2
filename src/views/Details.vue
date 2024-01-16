@@ -103,7 +103,7 @@
     //     setsickNess: this.setsickNess
     //   }
     // },
-    name: 'NewDetails1',
+    name: 'Details',
     components: {
       CommonHeader,
       CommonFooter,
@@ -121,6 +121,8 @@
         is_pages:'',
         name:'',
         tag:'',
+        details_id: '', // 数据id
+        id: '', 
         kgid:'',
         dabutes:[], //疾病的属性类数组
         li_index: 0,
@@ -140,7 +142,6 @@
         linkTypes: [],
         cdssWidth: 800,
         cdssHeight: 600,
-        id: 0,
         showFull: [],
         getinfo:[],
         is_nofr: true,
@@ -167,7 +168,7 @@
       this.name = this.$route.query.name;
       this.tag = this.$route.query.tag?this.$route.query.tag:'';
       this.kgid = this.$route.query.kgid?this.$route.query.kgid:'';
-      this.id = Number(this.$route.query.id);
+      this.details_id = Number(this.$route.query.id);
       document.title = this.name;
       this.getNewDetail();
     },
@@ -201,6 +202,8 @@
         let that = this;
         let params = {
           label: that.tag,
+          name: that.name,
+          id: that.details_id,
           type:''
         };
         getNewDetail(params).then(res =>{
